@@ -1,0 +1,72 @@
+﻿body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul > li > a {
+    padding: 5px 10px;
+    margin: 0px 10px;
+    text-decoration: none;
+    color: #2d2d2d;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 22px;
+    transition: all .5s;
+    position: relative;
+}
+
+ul > li > a:hover {
+    background-color: #e91e6c;
+    color: white;
+}
+
+ul > li > a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #e91e6c;
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+    transition: all .5s;
+}
+
+ul > li > a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #e91e6c;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    transition: all .5s;
+}
+
+ul > li > a:hover:before, a:hover:after {
+    opacity: 1;
+}
+
+ul > li > a:hover:before {
+    left: -8px;
+    bottom: -8px;
+}
+
+ul > li > a:hover:after {
+    right: -8px;
+    top: -8px;
+}
