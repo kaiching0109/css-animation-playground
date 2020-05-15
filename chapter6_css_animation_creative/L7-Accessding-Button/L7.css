@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #262626;
+}
+
+a {
+    color: white;
+    border: 3px solid white;
+    padding: 20px 40px;
+    font-size: 80px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    transform: skew(-20deg) translate(-150%);
+    background-color: #F44336;
+    z-index: -1;
+    animation: moveToTheRight 2s linear infinite;
+    transition: all .5s;
+}
+
+a:hover:before {
+    animation: none;
+    transform: skew(0);
+    width: 100%;
+}
+
+@keyframes moveToTheRight{
+    from {
+        transform: skew(-20deg) translate(-150%);
+    }
+    to {
+        transform: skew(-20deg) translate(500%);
+    }
+}

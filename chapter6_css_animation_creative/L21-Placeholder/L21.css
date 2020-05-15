@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: sans-serif;
+    background-color: steelblue;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+    position: relative;
+}
+
+h1:before {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "loading..";
+    color: khaki;
+    height: 100%;
+    border-right: 3px solid khaki;
+    animation: placeholder 1.5s linear infinite;
+}
+
+@keyframes placeholder {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}

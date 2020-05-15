@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "タスク-L19-Loading-Cude",
+      "appliesTo": "L19-Loading-Cude/",
+      "type": "launch"
+    }
+  ]
+}
